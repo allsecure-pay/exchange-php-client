@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Exception;
+namespace Asx\Client\Exception;
 
 /**
  * Class TimeoutException
  *
- * @package Ixopay\Client\Exception
+ * @package Asx\Client\Exception
  */
 class TimeoutException extends ClientException {
 
