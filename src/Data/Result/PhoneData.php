@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Data\Result;
+namespace Asx\Client\Data\Result;
 
 /**
  * Class PhoneData
  *
- * @package Ixopay\Client\Data\Result
+ * @package Asx\Client\Data\Result
  */
 class PhoneData extends ResultData {
 
