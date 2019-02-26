@@ -1,9 +1,9 @@
 <?php
 
-use Ixopay\Client\Client;
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Transaction\Debit;
-use Ixopay\Client\Transaction\Result;
+use Asx\Client\Client;
+use Asx\Client\Data\Customer;
+use Asx\Client\Transaction\Debit;
+use Asx\Client\Transaction\Result;
 
 require_once('../initClientAutoload.php');
 
