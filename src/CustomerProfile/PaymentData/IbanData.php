@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile\PaymentData;
+namespace Asx\Client\CustomerProfile\PaymentData;
 
 /**
  * Class IbanData
  *
- * @package Ixopay\Client\CustomerProfile\PaymentData
+ * @package Asx\Client\CustomerProfile\PaymentData
  *
  * @property string $iban
  * @property string $bic
