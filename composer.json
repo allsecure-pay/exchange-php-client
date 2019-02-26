@@ -1,0 +1,23 @@
+{
+    "name": "ixolit/ixopay-php-client",
+    "description": "Ixopay Client for PHP",
+    "keywords": [
+        "ixopay"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0",
+        "ext-curl": "*",
+        "psr/log": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ixopay\\Client\\": "src/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
