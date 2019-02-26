@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile;
+namespace Asx\Client\CustomerProfile;
 
-use Ixopay\Client\Json\ResponseObject;
+use Asx\Client\Json\ResponseObject;
 
 /**
  * Class DeleteProfileResponse
  *
- * @package Ixopay\Client\CustomerProfile
+ * @package Asx\Client\CustomerProfile
  *
  */
 class DeleteProfileResponse extends ResponseObject {
