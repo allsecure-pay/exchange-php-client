@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile\PaymentData;
+namespace Asx\Client\CustomerProfile\PaymentData;
 
 /**
  * Class WalletData
  *
- * @package Ixopay\Client\CustomerProfile\PaymentData
+ * @package Asx\Client\CustomerProfile\PaymentData
  *
  * @property string $walletReferenceId
  * @property string $walletOwner
