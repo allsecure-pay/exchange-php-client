@@ -1,7 +1,7 @@
 <?php
 
-use Ixopay\Client\Client;
-use Ixopay\Client\StatusApi\StatusRequestData;
+use Asx\Client\Client;
+use Asx\Client\StatusApi\StatusRequestData;
 
 require_once('../initClientAutoload.php');
 
