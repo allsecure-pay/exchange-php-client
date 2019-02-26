@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Data;
+namespace Asx\Client\Data;
 
 /**
  * Represents a generic customer without any specific data.
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class Customer extends Data {
 
