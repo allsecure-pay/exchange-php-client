@@ -1,16 +1,16 @@
 <?php
 
-namespace Ixopay\Client\Callback;
+namespace Asx\Client\Callback;
 
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Data\Result\ResultData;
-use Ixopay\Client\Transaction\Error;
+use Asx\Client\Data\Customer;
+use Asx\Client\Data\Result\ResultData;
+use Asx\Client\Transaction\Error;
 
 /**
  * Callback result, which is produced by processing a callback request's body.
  * Reports the status of an asynchronous transaction.
  *
- * @package Ixopay\Client\Callback
+ * @package Asx\Client\Callback
  */
 class Result {
     /** The callback reports, that the transaction finished successfully. */
