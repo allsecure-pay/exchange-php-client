@@ -1,14 +1,14 @@
 <?php
 
-namespace Ixopay\Client\Data;
+namespace Asx\Client\Data;
 
 
-use Ixopay\Client\Exception\InvalidValueException;
+use Asx\Client\Exception\InvalidValueException;
 
 /**
  * Class IbanCustomer
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class IbanCustomer extends Customer {
 
