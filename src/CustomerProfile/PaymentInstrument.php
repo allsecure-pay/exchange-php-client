@@ -1,14 +1,14 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile;
+namespace Asx\Client\CustomerProfile;
 
-use Ixopay\Client\CustomerProfile\PaymentData\PaymentData;
-use Ixopay\Client\Json\DataObject;
+use Asx\Client\CustomerProfile\PaymentData\PaymentData;
+use Asx\Client\Json\DataObject;
 
 /**
  * Class PaymentInstrument
  *
- * @package Ixopay\Client\CustomerProfile
+ * @package Asx\Client\CustomerProfile
  *
  * @property string $method
  * @property string $paymentToken
