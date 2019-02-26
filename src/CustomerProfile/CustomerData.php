@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile;
+namespace Asx\Client\CustomerProfile;
 
-use Ixopay\Client\Json\DataObject;
+use Asx\Client\Json\DataObject;
 
 /**
  * Class CustomerData
  *
- * @package Ixopay\Client\CustomerProfile
+ * @package Asx\Client\CustomerProfile
  *
  * @property string firstName
  * @property string $lastName
