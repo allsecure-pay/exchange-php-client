@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Ixopay\Client\Data\Result;
+namespace Asx\Client\Data\Result;
 
 /**
  * Class ResultData
  *
- * @package Ixopay\Client\Data\Result
+ * @package Asx\Client\Data\Result
  */
 abstract class ResultData {
 
