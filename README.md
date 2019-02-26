@@ -12,15 +12,15 @@ composer require ixolit/ixopay-php-client
 ```php
 <?php
 
-use Ixopay\Client\Client;
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Transaction\Debit;
-use Ixopay\Client\Transaction\Result;
+use Asx\Client\Client;
+use Asx\Client\Data\Customer;
+use Asx\Client\Transaction\Debit;
+use Asx\Client\Transaction\Result;
 
 // Include the autoloader (if not already done via Composer autoloader)
 require_once('path/to/initClientAutoload.php');
 
-// Instantiate the "Ixopay\Client\Client" with your credentials
+// Instantiate the "Asx\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
 $customer = new Customer();
