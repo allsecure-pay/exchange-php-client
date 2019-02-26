@@ -1,8 +1,8 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile\PaymentData;
+namespace Asx\Client\CustomerProfile\PaymentData;
 
-use Ixopay\Client\Json\DataObject;
+use Asx\Client\Json\DataObject;
 
 /**
  * Class PaymentData
