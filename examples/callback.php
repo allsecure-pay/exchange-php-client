@@ -1,7 +1,7 @@
 <?php
 
-use Ixopay\Client\Client;
-use Ixopay\Client\Callback\Result;
+use Asx\Client\Client;
+use Asx\Client\Callback\Result;
 
 require_once('../initClientAutoload.php');
 
