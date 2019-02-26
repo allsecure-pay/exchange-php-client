@@ -2,7 +2,7 @@
 
 spl_autoload_register(function ($class) {
 
-    $baseNamespace = 'Ixopay\\Client\\';
+    $baseNamespace = 'Asx\\Client\\';
     $srcDir = __DIR__ . '/src/';
 
     $len = strlen($baseNamespace);
