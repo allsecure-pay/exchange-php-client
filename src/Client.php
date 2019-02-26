@@ -1,47 +1,47 @@
 <?php
 
-namespace Ixopay\Client;
+namespace Asx\Client;
 
-use Ixopay\Client\CustomerProfile\CustomerData;
-use Ixopay\Client\CustomerProfile\DeleteProfileResponse;
-use Ixopay\Client\CustomerProfile\GetProfileResponse;
-use Ixopay\Client\CustomerProfile\PaymentInstrument;
-use Ixopay\Client\CustomerProfile\UpdateProfileResponse;
-use Ixopay\Client\Json\ErrorResponse;
-use Ixopay\Client\Exception\RateLimitException;
-use Ixopay\Client\Schedule\ScheduleData;
-use Ixopay\Client\Exception\ClientException;
-use Ixopay\Client\Exception\InvalidValueException;
-use Ixopay\Client\Exception\TimeoutException;
-use Ixopay\Client\Http\CurlClient;
-use Ixopay\Client\Http\Response;
-use Ixopay\Client\StatusApi\StatusRequestData;
-use Ixopay\Client\Transaction\Base\AbstractTransaction;
-use Ixopay\Client\Transaction\Capture;
-use Ixopay\Client\Transaction\Debit;
-use Ixopay\Client\Transaction\Deregister;
-use Ixopay\Client\Transaction\Payout;
-use Ixopay\Client\Transaction\Preauthorize;
-use Ixopay\Client\Transaction\Refund;
-use Ixopay\Client\Transaction\Register;
-use Ixopay\Client\Transaction\Result;
-use Ixopay\Client\Transaction\VoidTransaction;
-use Ixopay\Client\Xml\Generator;
-use Ixopay\Client\Xml\Parser;
+use Asx\Client\CustomerProfile\CustomerData;
+use Asx\Client\CustomerProfile\DeleteProfileResponse;
+use Asx\Client\CustomerProfile\GetProfileResponse;
+use Asx\Client\CustomerProfile\PaymentInstrument;
+use Asx\Client\CustomerProfile\UpdateProfileResponse;
+use Asx\Client\Json\ErrorResponse;
+use Asx\Client\Exception\RateLimitException;
+use Asx\Client\Schedule\ScheduleData;
+use Asx\Client\Exception\ClientException;
+use Asx\Client\Exception\InvalidValueException;
+use Asx\Client\Exception\TimeoutException;
+use Asx\Client\Http\CurlClient;
+use Asx\Client\Http\Response;
+use Asx\Client\StatusApi\StatusRequestData;
+use Asx\Client\Transaction\Base\AbstractTransaction;
+use Asx\Client\Transaction\Capture;
+use Asx\Client\Transaction\Debit;
+use Asx\Client\Transaction\Deregister;
+use Asx\Client\Transaction\Payout;
+use Asx\Client\Transaction\Preauthorize;
+use Asx\Client\Transaction\Refund;
+use Asx\Client\Transaction\Register;
+use Asx\Client\Transaction\Result;
+use Asx\Client\Transaction\VoidTransaction;
+use Asx\Client\Xml\Generator;
+use Asx\Client\Xml\Parser;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
 /**
  * Class Client
  *
- * @package Ixopay\Client
+ * @package Asx\Client
  */
 class Client {
 
     /**
-     * The default url points to the IxoPay Gateway
+     * The default url points to the AllSecure eXchange Gateway
      */
-    const DEFAULT_IXOPAY_URL = 'https://gateway.ixopay.com/';
+    const DEFAULT_ASX_URL = 'https://asxgw.com/';
 
     const TRANSACTION_ROUTE = 'transaction';
 
@@ -64,10 +64,10 @@ class Client {
     /**
      * @var string
      */
-    protected static $gatewayUrl = 'https://gateway.ixopay.com/';
+    protected static $gatewayUrl = 'https://asxgw.com/';
 
     /**
-     * the api key given by the ixopay gateway
+     * the api key given by the allsecure exchange gateway
      *
      * @var string
      */
@@ -560,7 +560,7 @@ class Client {
     /**
      * void a previously preauthorized transaction
      *
-     * @param \Ixopay\Client\Transaction\VoidTransaction $transactionData
+     * @param \Asx\Client\Transaction\VoidTransaction $transactionData
      *
      * @return Result
      * @throws ClientException
@@ -672,7 +672,7 @@ class Client {
         $curl = new CurlClient();
         $digest = $curl->createSignature($this->getSharedSecret(), 'POST', $requestBody, 'text/xml; charset=utf-8',
             $dateHeader, $requestQuery);
-        $expectedSig = 'IxoPay ' . $this->getApiKey() . ':' . $digest;
+        $expectedSig = 'Asx ' . $this->getApiKey() . ':' . $digest;
         $expectedSig2 = 'Gateway '.$this->getApiKey() . ':' . $digest;
 
 
@@ -1097,7 +1097,7 @@ class Client {
     }
 
     /**
-     * Sets the IxoPay Gateway url (API URL) to the given one. This allows to set up a development/test environment.
+     * Sets the AllSecure eXchange Gateway url (API URL) to the given one. This allows to set up a development/test environment.
      * The API url is already set to the proper value by default.
      *
      * Please note that setting the API URL affects all instances (including the existing ones) of this client.
@@ -1114,11 +1114,11 @@ class Client {
      */
     public static function setApiUrl($url) {
         if (empty($url)) {
-            throw new InvalidValueException('The URL to the IxoPay Gateway can not be empty!');
+            throw new InvalidValueException('The URL to the AllSecure eXchange Gateway can not be empty!');
         }
 
         if (!\filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED | FILTER_FLAG_HOST_REQUIRED)) {
-            throw new InvalidValueException('The URL to the IxoPay Gateway should be a valid URL!');
+            throw new InvalidValueException('The URL to the AllSecure eXchange Gateway should be a valid URL!');
         }
 
         static::$gatewayUrl = $url;
@@ -1139,7 +1139,7 @@ class Client {
      * @return string
      */
     public static function getDefaultUrl() {
-        return static::DEFAULT_IXOPAY_URL;
+        return static::DEFAULT_ASX_URL;
     }
 
     /**
@@ -1151,7 +1151,7 @@ class Client {
      * @throws InvalidValueException
      */
     public static function resetApiUrl() {
-        static::setApiUrl(static::DEFAULT_IXOPAY_URL);
+        static::setApiUrl(static::DEFAULT_ASX_URL);
     }
 
 }
