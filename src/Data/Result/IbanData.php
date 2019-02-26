@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Data\Result;
+namespace Asx\Client\Data\Result;
 
 /**
  * Represents a credit card.
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class IbanData extends ResultData {
 
