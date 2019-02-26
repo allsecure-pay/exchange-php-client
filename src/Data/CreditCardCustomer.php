@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Data;
+namespace Asx\Client\Data;
 
 /**
  * Specialized class to represent a customer with credit card data.
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class CreditCardCustomer extends Customer {
 
