@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Callback;
+namespace Asx\Client\Callback;
 
 /**
  * Class ChargebackReversalData
  *
- * @package Ixopay\Client\Callback
+ * @package Asx\Client\Callback
  */
 class ChargebackReversalData {
 
