@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile\PaymentData;
+namespace Asx\Client\CustomerProfile\PaymentData;
 
 /**
  * Class CardData
  *
- * @package Ixopay\Client\CustomerProfile\PaymentData
+ * @package Asx\Client\CustomerProfile\PaymentData
  *
  * @property string $brand
  * @property string $cardHolder
