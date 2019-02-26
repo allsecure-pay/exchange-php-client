@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\CustomerProfile;
+namespace Asx\Client\CustomerProfile;
 
-use Ixopay\Client\Json\ResponseObject;
+use Asx\Client\Json\ResponseObject;
 
 /**
  * Class UpdateProfileResponse
  *
- * @package Ixopay\Client\CustomerProfile
+ * @package Asx\Client\CustomerProfile
  *
  * @property string $profileGuid
  * @property string $customerIdentification
