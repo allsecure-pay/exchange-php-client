@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Data;
+namespace Asx\Client\Data;
 
 /**
  * Class Data
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 abstract class Data {
 
