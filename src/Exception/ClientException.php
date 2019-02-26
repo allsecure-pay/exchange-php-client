@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Exception;
+namespace Asx\Client\Exception;
 
 /**
  * Class ClientException
  *
- * @package Ixopay\Client\Exception
+ * @package Asx\Client\Exception
  */
 class ClientException extends \Exception {
 
