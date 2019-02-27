@@ -1,14 +1,14 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Data\Result\ResultData;
+use Asx\Client\Data\Customer;
+use Asx\Client\Data\Result\ResultData;
 
 /**
  * Class Result
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Result {
 
