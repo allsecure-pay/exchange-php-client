@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
-use Ixopay\Client\Schedule\ScheduleData;
+use Asx\Client\Schedule\ScheduleData;
 
 /**
  * Trait ScheduleTrait
  *
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 trait ScheduleTrait {
 
