@@ -6,7 +6,7 @@ use Asx\Client\Data\Item;
 /**
  * Interface ItemsInterface
  *
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 interface ItemsInterface {
 
