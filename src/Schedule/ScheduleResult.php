@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Schedule;
+namespace Asx\Client\Schedule;
 
 /**
  * Class Result
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class ScheduleResult {
 
