@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Ixopay\Client\Http;
+namespace Asx\Client\Http;
 
 /**
  * Class CurlExec
  *
- * @package Ixopay\Client\Http
+ * @package Asx\Client\Http
  */
 class CurlExec {
 
