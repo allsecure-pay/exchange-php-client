@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Transaction\Base\AbstractTransactionWithReference;
+use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
 
 /**
  * Void: Revert a previously preauthorized transaction.
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class VoidTransaction extends AbstractTransactionWithReference {
 
