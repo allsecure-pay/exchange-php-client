@@ -1,10 +1,10 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Interface AddToCustomerProfileInterface
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 interface AddToCustomerProfileInterface {
 
