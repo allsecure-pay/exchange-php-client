@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Http;
+namespace Asx\Client\Http;
 
-use Ixopay\Client\Http\Exception\ResponseException;
+use Asx\Client\Http\Exception\ResponseException;
 
 /**
  * Class Response
  *
- * @package Ixopay\Client\Http
+ * @package Asx\Client\Http
  */
 class Response implements ResponseInterface {
 
