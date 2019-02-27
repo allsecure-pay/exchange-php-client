@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Class AmountableTrait
  *
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 trait AmountableTrait {
 
