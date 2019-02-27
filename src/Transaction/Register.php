@@ -1,21 +1,21 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Transaction\Base\AbstractTransaction;
-use Ixopay\Client\Transaction\Base\AddToCustomerProfileInterface;
-use Ixopay\Client\Transaction\Base\AddToCustomerProfileTrait;
-use Ixopay\Client\Transaction\Base\OffsiteInterface;
-use Ixopay\Client\Transaction\Base\OffsiteTrait;
-use Ixopay\Client\Transaction\Base\ScheduleInterface;
-use Ixopay\Client\Transaction\Base\ScheduleTrait;
+use Asx\Client\Transaction\Base\AbstractTransaction;
+use Asx\Client\Transaction\Base\AddToCustomerProfileInterface;
+use Asx\Client\Transaction\Base\AddToCustomerProfileTrait;
+use Asx\Client\Transaction\Base\OffsiteInterface;
+use Asx\Client\Transaction\Base\OffsiteTrait;
+use Asx\Client\Transaction\Base\ScheduleInterface;
+use Asx\Client\Transaction\Base\ScheduleTrait;
 
 /**
  * Register: Register the customer's payment data for recurring charges.
  *
  * The registered customer payment data will be available for recurring transaction without user interaction.
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Register extends AbstractTransaction implements OffsiteInterface, ScheduleInterface, AddToCustomerProfileInterface {
     use OffsiteTrait;
