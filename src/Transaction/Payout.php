@@ -1,17 +1,17 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Transaction\Base\AbstractTransactionWithReference;
-use Ixopay\Client\Transaction\Base\AmountableInterface;
-use Ixopay\Client\Transaction\Base\AmountableTrait;
-use Ixopay\Client\Transaction\Base\ItemsInterface;
-use Ixopay\Client\Transaction\Base\ItemsTrait;
+use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
+use Asx\Client\Transaction\Base\AmountableInterface;
+use Asx\Client\Transaction\Base\AmountableTrait;
+use Asx\Client\Transaction\Base\ItemsInterface;
+use Asx\Client\Transaction\Base\ItemsTrait;
 
 /**
  * Payout: Payout a certain amount of money to the customer. (Debits the merchant's account, Credits the customer's account)
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Payout extends AbstractTransactionWithReference implements AmountableInterface, ItemsInterface {
     use ItemsTrait;
