@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Class AbstractReferenced
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 abstract class AbstractTransactionWithReference extends AbstractTransaction {
 
