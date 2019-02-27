@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Interface OffsiteInterface
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 interface OffsiteInterface {
 
@@ -27,7 +27,7 @@ interface OffsiteInterface {
     public function getSuccessUrl();
 
     /**
-     * the url to which IxoPay redirects after a successful transaction
+     * the url to which AllSecure eXchange redirects after a successful transaction
      *
      * @param string $successUrl
      */
@@ -39,7 +39,7 @@ interface OffsiteInterface {
     public function getCancelUrl();
 
     /**
-     * the url to which IxoPay redirects after a cancelled transaction
+     * the url to which AllSecure eXchange redirects after a cancelled transaction
      *
      * @param string $cancelUrl
      */
@@ -51,7 +51,7 @@ interface OffsiteInterface {
     public function getErrorUrl();
 
     /**
-     * the url to which IxoPay redirects after a failed transaction
+     * the url to which AllSecure eXchange redirects after a failed transaction
      *
      * @param string $errorUrl
      */
@@ -63,7 +63,7 @@ interface OffsiteInterface {
     public function getCallbackUrl();
 
     /**
-     * the url to which IxoPay sends the Callback notification
+     * the url to which AllSecure eXchange sends the Callback notification
      *
      * @param string $callbackUrl
      */
