@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\StatusApi;
+namespace Asx\Client\StatusApi;
 
-use Ixopay\Client\Exception\TypeException;
+use Asx\Client\Exception\TypeException;
 
 /**
  * Class StatusRequestData
  *
- * @package Ixopay\Client\StatusApi
+ * @package Asx\Client\StatusApi
  */
 class StatusRequestData {
 
