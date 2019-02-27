@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Schedule;
+namespace Asx\Client\Schedule;
 
 /**
  * Class ScheduleError
  *
- * @package Ixopay\Client\Schedule
+ * @package Asx\Client\Schedule
  */
 class ScheduleError {
 
