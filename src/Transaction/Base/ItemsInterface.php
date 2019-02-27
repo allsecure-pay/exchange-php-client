@@ -1,7 +1,7 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
-use Ixopay\Client\Data\Item;
+namespace Asx\Client\Transaction\Base;
+use Asx\Client\Data\Item;
 
 /**
  * Interface ItemsInterface
