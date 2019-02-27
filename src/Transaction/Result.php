@@ -223,7 +223,7 @@ class Result {
     }
 
     /**
-     * contains IxoPay's transaction id
+     * contains AllSecure eXchange transaction id
      *
      * @return string
      */
@@ -385,14 +385,14 @@ class Result {
     /**
      * contains additional data for your purpose (e.g. credit card information)
      *
-     * @return \Ixopay\Client\Data\Result\ResultData
+     * @return \Asx\Client\Data\Result\ResultData
      */
     public function getReturnData() {
         return $this->returnData;
     }
 
     /**
-     * @param \Ixopay\Client\Data\Result\ResultData $returnData
+     * @param \Asx\Client\Data\Result\ResultData $returnData
      *
      * @return $this
      */
