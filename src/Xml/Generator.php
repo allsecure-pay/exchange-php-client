@@ -1,34 +1,34 @@
 <?php
 
-namespace Ixopay\Client\Xml;
+namespace Asx\Client\Xml;
 
-use Ixopay\Client\Data\CreditCardCustomer;
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Data\IbanCustomer;
-use Ixopay\Client\Data\Request;
-use Ixopay\Client\Exception\InvalidValueException;
-use Ixopay\Client\Schedule\ScheduleData;
-use Ixopay\Client\Exception\TypeException;
-use Ixopay\Client\StatusApi\StatusRequestData;
-use Ixopay\Client\Transaction\Base\AbstractTransaction;
-use Ixopay\Client\Transaction\Base\AbstractTransactionWithReference;
-use Ixopay\Client\Transaction\Base\AmountableInterface;
-use Ixopay\Client\Transaction\Base\ItemsInterface;
-use Ixopay\Client\Transaction\Base\OffsiteInterface;
-use Ixopay\Client\Transaction\Capture;
-use Ixopay\Client\Transaction\Debit;
-use Ixopay\Client\Transaction\Deregister;
-use Ixopay\Client\Transaction\Payout;
-use Ixopay\Client\Transaction\Preauthorize;
-use Ixopay\Client\Transaction\Refund;
-use Ixopay\Client\Transaction\Register;
-use Ixopay\Client\Transaction\VoidTransaction;
-use Ixopay\Client\Transaction\Base\AddToCustomerProfileInterface;
+use Asx\Client\Data\CreditCardCustomer;
+use Asx\Client\Data\Customer;
+use Asx\Client\Data\IbanCustomer;
+use Asx\Client\Data\Request;
+use Asx\Client\Exception\InvalidValueException;
+use Asx\Client\Schedule\ScheduleData;
+use Asx\Client\Exception\TypeException;
+use Asx\Client\StatusApi\StatusRequestData;
+use Asx\Client\Transaction\Base\AbstractTransaction;
+use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
+use Asx\Client\Transaction\Base\AmountableInterface;
+use Asx\Client\Transaction\Base\ItemsInterface;
+use Asx\Client\Transaction\Base\OffsiteInterface;
+use Asx\Client\Transaction\Capture;
+use Asx\Client\Transaction\Debit;
+use Asx\Client\Transaction\Deregister;
+use Asx\Client\Transaction\Payout;
+use Asx\Client\Transaction\Preauthorize;
+use Asx\Client\Transaction\Refund;
+use Asx\Client\Transaction\Register;
+use Asx\Client\Transaction\VoidTransaction;
+use Asx\Client\Transaction\Base\AddToCustomerProfileInterface;
 
 /**
  * Class Generator
  *
- * @package Ixopay\Client\Xml
+ * @package Asx\Client\Xml
  */
 class Generator {
 
@@ -40,7 +40,7 @@ class Generator {
     /**
      * @var string
      */
-    protected $namespaceRoot = 'http://gateway.ixopay.com';
+    protected $namespaceRoot = 'http://asxgw.com';
 
     /**
      * @param string $namespaceRoot
@@ -635,7 +635,7 @@ class Generator {
     }
 
     /**
-     * @param \Ixopay\Client\Transaction\VoidTransaction $transaction
+     * @param \Asx\Client\Transaction\VoidTransaction $transaction
      * @param $method
      *
      * @return \DOMElement
