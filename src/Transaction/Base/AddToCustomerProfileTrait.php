@@ -1,10 +1,10 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Trait AddToCustomerProfileTrait
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 trait AddToCustomerProfileTrait {
 
