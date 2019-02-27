@@ -1,12 +1,12 @@
 <?php
 
-namespace Ixopay\Client\StatusApi;
+namespace Asx\Client\StatusApi;
 
-use Ixopay\Client\Callback\ChargebackData;
-use Ixopay\Client\Callback\ChargebackReversalData;
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Data\Result\ResultData;
-use Ixopay\Client\Transaction\Error;
+use Asx\Client\Callback\ChargebackData;
+use Asx\Client\Callback\ChargebackReversalData;
+use Asx\Client\Data\Customer;
+use Asx\Client\Data\Result\ResultData;
+use Asx\Client\Transaction\Error;
 
 /**
  *
