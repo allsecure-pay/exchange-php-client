@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Http;
+namespace Asx\Client\Http;
 
 /**
  * Interface ResponseInterface
  *
- * @package Ixopay\Client\Http
+ * @package Asx\Client\Http
  */
 interface ResponseInterface {
 
