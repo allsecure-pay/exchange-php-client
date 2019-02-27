@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Schedule;
+namespace Asx\Client\Schedule;
 
-use Ixopay\Client\Transaction\Base\AmountableInterface;
+use Asx\Client\Transaction\Base\AmountableInterface;
 
 /**
  * Class Schedule
  *
- * @package Ixopay\Client\Data
+ * @package Asx\Client\Data
  */
 class ScheduleData implements AmountableInterface {
 
