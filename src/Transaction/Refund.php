@@ -1,19 +1,19 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Transaction\Base\AbstractTransactionWithReference;
-use Ixopay\Client\Transaction\Base\AmountableInterface;
-use Ixopay\Client\Transaction\Base\AmountableTrait;
-use Ixopay\Client\Transaction\Base\ItemsInterface;
-use Ixopay\Client\Transaction\Base\ItemsTrait;
+use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
+use Asx\Client\Transaction\Base\AmountableInterface;
+use Asx\Client\Transaction\Base\AmountableTrait;
+use Asx\Client\Transaction\Base\ItemsInterface;
+use Asx\Client\Transaction\Base\ItemsTrait;
 
 /**
  * Refund: Refund money from a previous Debit (or Capture) transaction to the customer.
  *
  * @note Preauthorized transactions can be reverted with a Void transaction, not a Refund!
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Refund extends AbstractTransactionWithReference implements AmountableInterface, ItemsInterface {
     use AmountableTrait;
