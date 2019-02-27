@@ -1,10 +1,10 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
 /**
  * Class Error
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Error {
 
