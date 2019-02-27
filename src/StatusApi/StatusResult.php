@@ -10,7 +10,7 @@ use Asx\Client\Transaction\Error;
 
 /**
  *
- * @package Ixopay\Client\StatusApi
+ * @package Asx\Client\StatusApi
  */
 class StatusResult {
 
