@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Ixopay\Client\Http;
+namespace Asx\Client\Http;
 
 /**
  * Interface ClientInterface
  *
- * @package Ixopay\Client\Http
+ * @package Asx\Client\Http
  */
 interface ClientInterface {
 
