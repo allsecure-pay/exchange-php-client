@@ -1,27 +1,27 @@
 <?php
 
-namespace Ixopay\Client\Xml;
+namespace Asx\Client\Xml;
 
-use Ixopay\Client\Callback\ChargebackData;
-use Ixopay\Client\Callback\ChargebackReversalData;
-use Ixopay\Client\Data\Customer;
-use Ixopay\Client\Data\Result\CreditcardData;
-use Ixopay\Client\Data\Result\IbanData;
-use Ixopay\Client\Data\Result\PhoneData;
-use Ixopay\Client\Data\Result\ResultData;
-use Ixopay\Client\Exception\ClientException;
-use Ixopay\Client\Schedule\ScheduleResult;
-use Ixopay\Client\Exception\InvalidValueException;
-use Ixopay\Client\Schedule\ScheduleError;
-use Ixopay\Client\StatusApi\StatusResult;
-use Ixopay\Client\Transaction\Error;
-use Ixopay\Client\Transaction\Result;
-use Ixopay\Client\Callback\Result as CallbackResult;
+use Asx\Client\Callback\ChargebackData;
+use Asx\Client\Callback\ChargebackReversalData;
+use Asx\Client\Data\Customer;
+use Asx\Client\Data\Result\CreditcardData;
+use Asx\Client\Data\Result\IbanData;
+use Asx\Client\Data\Result\PhoneData;
+use Asx\Client\Data\Result\ResultData;
+use Asx\Client\Exception\ClientException;
+use Asx\Client\Schedule\ScheduleResult;
+use Asx\Client\Exception\InvalidValueException;
+use Asx\Client\Schedule\ScheduleError;
+use Asx\Client\StatusApi\StatusResult;
+use Asx\Client\Transaction\Error;
+use Asx\Client\Transaction\Result;
+use Asx\Client\Callback\Result as CallbackResult;
 
 /**
  * Class Parser
  *
- * @package Ixopay\Client\Xml
+ * @package Asx\Client\Xml
  */
 class Parser {
 
