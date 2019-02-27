@@ -1,11 +1,11 @@
-<?php
+Asx<?php
 
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
 /**
  * Interface AmountableInterface
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 interface AmountableInterface {
     /**
