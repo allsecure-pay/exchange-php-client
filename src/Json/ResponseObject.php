@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Json;
+namespace Asx\Client\Json;
 
 /**
  * Class ResponseObject
  *
- * @package Ixopay\Client\Json
+ * @package Asx\Client\Json
  *
  * @property bool $success
  */
