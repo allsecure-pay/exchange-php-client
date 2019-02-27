@@ -1,8 +1,8 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
-use Ixopay\Client\Schedule\ScheduleData;
+use Asx\Client\Schedule\ScheduleData;
 
 interface ScheduleInterface {
 
