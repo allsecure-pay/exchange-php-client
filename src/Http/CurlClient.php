@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Http;
+namespace Asx\Client\Http;
 
-use Ixopay\Client\Http\Exception\ClientException;
+use Asx\Client\Http\Exception\ClientException;
 
 /**
  * Class CurlClient
  *
- * @package Ixopay\Client\Http
+ * @package Asx\Client\Http
  */
 class CurlClient implements ClientInterface {
 
