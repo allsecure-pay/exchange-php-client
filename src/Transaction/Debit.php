@@ -1,23 +1,23 @@
 <?php
 
-namespace Ixopay\Client\Transaction;
+namespace Asx\Client\Transaction;
 
-use Ixopay\Client\Transaction\Base\AbstractTransactionWithReference;
-use Ixopay\Client\Transaction\Base\AddToCustomerProfileInterface;
-use Ixopay\Client\Transaction\Base\AddToCustomerProfileTrait;
-use Ixopay\Client\Transaction\Base\AmountableInterface;
-use Ixopay\Client\Transaction\Base\AmountableTrait;
-use Ixopay\Client\Transaction\Base\ItemsInterface;
-use Ixopay\Client\Transaction\Base\ItemsTrait;
-use Ixopay\Client\Transaction\Base\OffsiteInterface;
-use Ixopay\Client\Transaction\Base\OffsiteTrait;
-use Ixopay\Client\Transaction\Base\ScheduleInterface;
-use Ixopay\Client\Transaction\Base\ScheduleTrait;
+use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
+use Asx\Client\Transaction\Base\AddToCustomerProfileInterface;
+use Asx\Client\Transaction\Base\AddToCustomerProfileTrait;
+use Asx\Client\Transaction\Base\AmountableInterface;
+use Asx\Client\Transaction\Base\AmountableTrait;
+use Asx\Client\Transaction\Base\ItemsInterface;
+use Asx\Client\Transaction\Base\ItemsTrait;
+use Asx\Client\Transaction\Base\OffsiteInterface;
+use Asx\Client\Transaction\Base\OffsiteTrait;
+use Asx\Client\Transaction\Base\ScheduleInterface;
+use Asx\Client\Transaction\Base\ScheduleTrait;
 
 /**
  * Debit: Charge the customer for a certain amount of money. This could be once, but also recurring.
  *
- * @package Ixopay\Client\Transaction
+ * @package Asx\Client\Transaction
  */
 class Debit extends AbstractTransactionWithReference implements AmountableInterface, OffsiteInterface, ItemsInterface, ScheduleInterface, AddToCustomerProfileInterface {
     use OffsiteTrait;
