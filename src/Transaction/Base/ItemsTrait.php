@@ -1,13 +1,13 @@
 <?php
 
-namespace Ixopay\Client\Transaction\Base;
+namespace Asx\Client\Transaction\Base;
 
-use Ixopay\Client\Data\Item;
+use Asx\Client\Data\Item;
 
 /**
  * Class ItemsTrait
  *
- * @package Ixopay\Client\Transaction\Base
+ * @package Asx\Client\Transaction\Base
  */
 trait ItemsTrait {
 
