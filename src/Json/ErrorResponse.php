@@ -1,11 +1,11 @@
 <?php
 
-namespace Ixopay\Client\Json;
+namespace Asx\Client\Json;
 
 /**
  * Class ErrorResponse
  *
- * @package Ixopay\Client\Json
+ * @package Asx\Client\Json
  *
  * @property string $errorMessage
  * @property int $errorCode
