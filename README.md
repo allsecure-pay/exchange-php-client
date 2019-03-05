@@ -4,7 +4,7 @@ Ixopay Client
 ## Installation via composer:
 
 ```sh
-composer require allsecure-pay/php-xclient
+composer require allsecure-pay/php-xclient \\still not operational
 ```
 
 ## Usage:
