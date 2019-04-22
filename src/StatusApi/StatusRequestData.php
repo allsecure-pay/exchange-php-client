@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\StatusApi;
+namespace Exchange\Client\StatusApi;
 
-use Asx\Client\Exception\TypeException;
+use Exchange\Client\Exception\TypeException;
 
 /**
  * Class StatusRequestData
  *
- * @package Asx\Client\StatusApi
+ * @package Exchange\Client\StatusApi
  */
 class StatusRequestData {
 

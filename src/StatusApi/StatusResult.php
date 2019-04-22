@@ -1,16 +1,16 @@
 <?php
 
-namespace Asx\Client\StatusApi;
+namespace Exchange\Client\StatusApi;
 
-use Asx\Client\Callback\ChargebackData;
-use Asx\Client\Callback\ChargebackReversalData;
-use Asx\Client\Data\Customer;
-use Asx\Client\Data\Result\ResultData;
-use Asx\Client\Transaction\Error;
+use Exchange\Client\Callback\ChargebackData;
+use Exchange\Client\Callback\ChargebackReversalData;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Data\Result\ResultData;
+use Exchange\Client\Transaction\Error;
 
 /**
  *
- * @package Asx\Client\StatusApi
+ * @package Exchange\Client\StatusApi
  */
 class StatusResult {
 
