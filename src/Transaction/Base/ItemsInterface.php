@@ -1,12 +1,12 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
-use Asx\Client\Data\Item;
+namespace Exchange\Client\Transaction\Base;
+use Exchange\Client\Data\Item;
 
 /**
  * Interface ItemsInterface
  *
- * @package Asx\Client\Transaction\Base
+ * @package Exchange\Client\Transaction\Base
  */
 interface ItemsInterface {
 

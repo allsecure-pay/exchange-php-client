@@ -1,23 +1,23 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
-use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
-use Asx\Client\Transaction\Base\AddToCustomerProfileInterface;
-use Asx\Client\Transaction\Base\AddToCustomerProfileTrait;
-use Asx\Client\Transaction\Base\AmountableInterface;
-use Asx\Client\Transaction\Base\AmountableTrait;
-use Asx\Client\Transaction\Base\ItemsInterface;
-use Asx\Client\Transaction\Base\ItemsTrait;
-use Asx\Client\Transaction\Base\OffsiteInterface;
-use Asx\Client\Transaction\Base\OffsiteTrait;
-use Asx\Client\Transaction\Base\ScheduleInterface;
-use Asx\Client\Transaction\Base\ScheduleTrait;
+use Exchange\Client\Transaction\Base\AbstractTransactionWithReference;
+use Exchange\Client\Transaction\Base\AddToCustomerProfileInterface;
+use Exchange\Client\Transaction\Base\AddToCustomerProfileTrait;
+use Exchange\Client\Transaction\Base\AmountableInterface;
+use Exchange\Client\Transaction\Base\AmountableTrait;
+use Exchange\Client\Transaction\Base\ItemsInterface;
+use Exchange\Client\Transaction\Base\ItemsTrait;
+use Exchange\Client\Transaction\Base\OffsiteInterface;
+use Exchange\Client\Transaction\Base\OffsiteTrait;
+use Exchange\Client\Transaction\Base\ScheduleInterface;
+use Exchange\Client\Transaction\Base\ScheduleTrait;
 
 /**
  * Debit: Charge the customer for a certain amount of money. This could be once, but also recurring.
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Debit extends AbstractTransactionWithReference implements AmountableInterface, OffsiteInterface, ItemsInterface, ScheduleInterface, AddToCustomerProfileInterface {
     use OffsiteTrait;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
-use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
+use Exchange\Client\Transaction\Base\AbstractTransactionWithReference;
 
 /**
  * Deregister: Cancels the registration from a previous Register call.
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Deregister extends AbstractTransactionWithReference {
 

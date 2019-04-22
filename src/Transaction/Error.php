@@ -1,10 +1,10 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
 /**
  * Class Error
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Error {
 

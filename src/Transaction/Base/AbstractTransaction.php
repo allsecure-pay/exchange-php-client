@@ -1,14 +1,14 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
-use Asx\Client\Data\Customer;
-use Asx\Client\Data\Request;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Data\Request;
 
 /**
  * Class AbstractTransaction
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class AbstractTransaction {
 

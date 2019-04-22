@@ -1,14 +1,14 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
-use Asx\Client\Data\Customer;
-use Asx\Client\Data\Result\ResultData;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Data\Result\ResultData;
 
 /**
  * Class Result
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Result {
 
@@ -223,7 +223,7 @@ class Result {
     }
 
     /**
-     * contains AllSecure eXchange transaction id
+     * contains Exchange's transaction id
      *
      * @return string
      */
@@ -385,14 +385,14 @@ class Result {
     /**
      * contains additional data for your purpose (e.g. credit card information)
      *
-     * @return \Asx\Client\Data\Result\ResultData
+     * @return \Exchange\Client\Data\Result\ResultData
      */
     public function getReturnData() {
         return $this->returnData;
     }
 
     /**
-     * @param \Asx\Client\Data\Result\ResultData $returnData
+     * @param \Exchange\Client\Data\Result\ResultData $returnData
      *
      * @return $this
      */

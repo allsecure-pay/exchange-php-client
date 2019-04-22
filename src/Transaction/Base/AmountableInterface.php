@@ -1,11 +1,11 @@
-Asx<?php
+<?php
 
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
 /**
  * Interface AmountableInterface
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 interface AmountableInterface {
     /**

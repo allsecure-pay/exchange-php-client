@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
 /**
  * Class AbstractReferenced
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 abstract class AbstractTransactionWithReference extends AbstractTransaction {
 

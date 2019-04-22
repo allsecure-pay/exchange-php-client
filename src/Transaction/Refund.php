@@ -1,19 +1,19 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
-use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
-use Asx\Client\Transaction\Base\AmountableInterface;
-use Asx\Client\Transaction\Base\AmountableTrait;
-use Asx\Client\Transaction\Base\ItemsInterface;
-use Asx\Client\Transaction\Base\ItemsTrait;
+use Exchange\Client\Transaction\Base\AbstractTransactionWithReference;
+use Exchange\Client\Transaction\Base\AmountableInterface;
+use Exchange\Client\Transaction\Base\AmountableTrait;
+use Exchange\Client\Transaction\Base\ItemsInterface;
+use Exchange\Client\Transaction\Base\ItemsTrait;
 
 /**
  * Refund: Refund money from a previous Debit (or Capture) transaction to the customer.
  *
  * @note Preauthorized transactions can be reverted with a Void transaction, not a Refund!
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Refund extends AbstractTransactionWithReference implements AmountableInterface, ItemsInterface {
     use AmountableTrait;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
-use Asx\Client\Schedule\ScheduleData;
+use Exchange\Client\Schedule\ScheduleData;
 
 /**
  * Trait ScheduleTrait
  *
- * @package Asx\Client\Transaction\Base
+ * @package Exchange\Client\Transaction\Base
  */
 trait ScheduleTrait {
 

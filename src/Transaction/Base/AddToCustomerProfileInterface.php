@@ -1,10 +1,10 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
 /**
  * Interface AddToCustomerProfileInterface
- * @package Asx\Client\Transaction\Base
+ * @package Exchange\Client\Transaction\Base
  */
 interface AddToCustomerProfileInterface {
 

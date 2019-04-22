@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
-use Asx\Client\Data\Item;
+use Exchange\Client\Data\Item;
 
 /**
  * Class ItemsTrait
  *
- * @package Asx\Client\Transaction\Base
+ * @package Exchange\Client\Transaction\Base
  */
 trait ItemsTrait {
 

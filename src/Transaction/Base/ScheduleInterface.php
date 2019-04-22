@@ -1,8 +1,8 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
-use Asx\Client\Schedule\ScheduleData;
+use Exchange\Client\Schedule\ScheduleData;
 
 interface ScheduleInterface {
 

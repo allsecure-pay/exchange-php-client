@@ -1,17 +1,17 @@
 <?php
 
-namespace Asx\Client\Transaction;
+namespace Exchange\Client\Transaction;
 
-use Asx\Client\Transaction\Base\AbstractTransactionWithReference;
-use Asx\Client\Transaction\Base\AmountableInterface;
-use Asx\Client\Transaction\Base\AmountableTrait;
-use Asx\Client\Transaction\Base\ItemsInterface;
-use Asx\Client\Transaction\Base\ItemsTrait;
+use Exchange\Client\Transaction\Base\AbstractTransactionWithReference;
+use Exchange\Client\Transaction\Base\AmountableInterface;
+use Exchange\Client\Transaction\Base\AmountableTrait;
+use Exchange\Client\Transaction\Base\ItemsInterface;
+use Exchange\Client\Transaction\Base\ItemsTrait;
 
 /**
  * Payout: Payout a certain amount of money to the customer. (Debits the merchant's account, Credits the customer's account)
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 class Payout extends AbstractTransactionWithReference implements AmountableInterface, ItemsInterface {
     use ItemsTrait;

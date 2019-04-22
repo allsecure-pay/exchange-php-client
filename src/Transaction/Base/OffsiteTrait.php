@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
 /**
  * Class OffsiteTrait
  *
- * @package Asx\Client\Transaction
+ * @package Exchange\Client\Transaction
  */
 trait OffsiteTrait {
 

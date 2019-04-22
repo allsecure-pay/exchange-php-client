@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Asx\Client\Transaction\Base;
+namespace Exchange\Client\Transaction\Base;
 
 /**
  * Class AmountableTrait
  *
- * @package Asx\Client\Transaction\Base
+ * @package Exchange\Client\Transaction\Base
  */
 trait AmountableTrait {
 
