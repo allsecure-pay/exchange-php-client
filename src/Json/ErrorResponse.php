@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Json;
+namespace Exchange\Client\Json;
 
 /**
  * Class ErrorResponse
  *
- * @package Asx\Client\Json
+ * @package Exchange\Client\Json
  *
  * @property string $errorMessage
  * @property int $errorCode

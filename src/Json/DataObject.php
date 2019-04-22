@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Json;
+namespace Exchange\Client\Json;
 
 /**
  * Class DataObject
  *
- * @package Asx\Client\Json
+ * @package Exchange\Client\Json
  */
 class DataObject implements \ArrayAccess, \JsonSerializable {
 
@@ -15,11 +15,11 @@ class DataObject implements \ArrayAccess, \JsonSerializable {
     protected $_data = array();
 
     protected static $_typeMap = array(
-        'customerData' => \Asx\Client\CustomerProfile\CustomerData::class,
-        'paymentInstrument' => \Asx\Client\CustomerProfile\PaymentInstrument::class,
-        'paymentData.card' => \Asx\Client\CustomerProfile\PaymentData\CardData::class,
-        'paymentData.iban' => \Asx\Client\CustomerProfile\PaymentData\IbanData::class,
-        'paymentData.wallet' => \Asx\Client\CustomerProfile\PaymentData\WalletData::class,
+        'customerData' => \Exchange\Client\CustomerProfile\CustomerData::class,
+        'paymentInstrument' => \Exchange\Client\CustomerProfile\PaymentInstrument::class,
+        'paymentData.card' => \Exchange\Client\CustomerProfile\PaymentData\CardData::class,
+        'paymentData.iban' => \Exchange\Client\CustomerProfile\PaymentData\IbanData::class,
+        'paymentData.wallet' => \Exchange\Client\CustomerProfile\PaymentData\WalletData::class,
     );
 
     /**

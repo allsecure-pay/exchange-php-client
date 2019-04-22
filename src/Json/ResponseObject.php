@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Json;
+namespace Exchange\Client\Json;
 
 /**
  * Class ResponseObject
  *
- * @package Asx\Client\Json
+ * @package Exchange\Client\Json
  *
  * @property bool $success
  */
