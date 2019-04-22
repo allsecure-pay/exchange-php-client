@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Exception;
+namespace Exchange\Client\Exception;
 
 /**
  * Class RateLimitException
  *
- * @package Asx\Client\Exception
+ * @package Exchange\Client\Exception
  */
 class RateLimitException extends \Exception {
 

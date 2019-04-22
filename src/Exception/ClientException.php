@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Exception;
+namespace Exchange\Client\Exception;
 
 /**
  * Class ClientException
  *
- * @package Asx\Client\Exception
+ * @package Exchange\Client\Exception
  */
 class ClientException extends \Exception {
 
