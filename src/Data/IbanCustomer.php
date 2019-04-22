@@ -1,14 +1,14 @@
 <?php
 
-namespace Asx\Client\Data;
+namespace Exchange\Client\Data;
 
 
-use Asx\Client\Exception\InvalidValueException;
+use Exchange\Client\Exception\InvalidValueException;
 
 /**
  * Class IbanCustomer
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class IbanCustomer extends Customer {
 

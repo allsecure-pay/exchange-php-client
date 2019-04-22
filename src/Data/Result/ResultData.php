@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Asx\Client\Data\Result;
+namespace Exchange\Client\Data\Result;
 
 /**
  * Class ResultData
  *
- * @package Asx\Client\Data\Result
+ * @package Exchange\Client\Data\Result
  */
 abstract class ResultData {
 

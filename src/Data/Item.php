@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Data;
+namespace Exchange\Client\Data;
 
 /**
  * Class Item
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class Item extends Data {
 

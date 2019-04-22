@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Data\Result;
+namespace Exchange\Client\Data\Result;
 
 /**
  * Class PhoneData
  *
- * @package Asx\Client\Data\Result
+ * @package Exchange\Client\Data\Result
  */
 class PhoneData extends ResultData {
 

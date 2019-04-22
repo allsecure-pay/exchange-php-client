@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Data;
+namespace Exchange\Client\Data;
 
 /**
  * Specialized class to represent a customer with credit card data.
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class CreditCardCustomer extends Customer {
 

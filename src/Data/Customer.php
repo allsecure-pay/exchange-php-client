@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Data;
+namespace Exchange\Client\Data;
 
 /**
  * Represents a generic customer without any specific data.
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class Customer extends Data {
 
