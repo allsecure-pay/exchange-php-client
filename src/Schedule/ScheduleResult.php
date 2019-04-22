@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Schedule;
+namespace Exchange\Client\Schedule;
 
 /**
  * Class Result
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class ScheduleResult {
 

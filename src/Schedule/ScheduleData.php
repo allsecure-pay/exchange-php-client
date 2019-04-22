@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Schedule;
+namespace Exchange\Client\Schedule;
 
-use Asx\Client\Transaction\Base\AmountableInterface;
+use Exchange\Client\Transaction\Base\AmountableInterface;
 
 /**
  * Class Schedule
  *
- * @package Asx\Client\Data
+ * @package Exchange\Client\Data
  */
 class ScheduleData implements AmountableInterface {
 
