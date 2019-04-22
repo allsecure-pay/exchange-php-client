@@ -1,9 +1,9 @@
 <?php
 
-use Asx\Client\Client;
-use Asx\Client\Data\Customer;
-use Asx\Client\Transaction\Debit;
-use Asx\Client\Transaction\Result;
+use Exchange\Client\Client;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Transaction\Debit;
+use Exchange\Client\Transaction\Result;
 
 require_once('../initClientAutoload.php');
 
