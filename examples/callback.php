@@ -1,7 +1,7 @@
 <?php
 
-use Asx\Client\Client;
-use Asx\Client\Callback\Result;
+use Exchange\Client\Client;
+use Exchange\Client\Callback\Result;
 
 require_once('../initClientAutoload.php');
 
