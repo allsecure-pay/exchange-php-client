@@ -1,14 +1,14 @@
 <?php
 
-namespace Asx\Client\CustomerProfile;
+namespace Exchange\Client\CustomerProfile;
 
-use Asx\Client\CustomerProfile\PaymentData\PaymentData;
-use Asx\Client\Json\DataObject;
+use Exchange\Client\CustomerProfile\PaymentData\PaymentData;
+use Exchange\Client\Json\DataObject;
 
 /**
  * Class PaymentInstrument
  *
- * @package Asx\Client\CustomerProfile
+ * @package Exchange\Client\CustomerProfile
  *
  * @property string $method
  * @property string $paymentToken

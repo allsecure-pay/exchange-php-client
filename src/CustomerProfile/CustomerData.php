@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\CustomerProfile;
+namespace Exchange\Client\CustomerProfile;
 
-use Asx\Client\Json\DataObject;
+use Exchange\Client\Json\DataObject;
 
 /**
  * Class CustomerData
  *
- * @package Asx\Client\CustomerProfile
+ * @package Exchange\Client\CustomerProfile
  *
  * @property string firstName
  * @property string $lastName

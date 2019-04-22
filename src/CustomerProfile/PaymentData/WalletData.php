@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\CustomerProfile\PaymentData;
+namespace Exchange\Client\CustomerProfile\PaymentData;
 
 /**
  * Class WalletData
  *
- * @package Asx\Client\CustomerProfile\PaymentData
+ * @package Exchange\Client\CustomerProfile\PaymentData
  *
  * @property string $walletReferenceId
  * @property string $walletOwner

@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\CustomerProfile;
+namespace Exchange\Client\CustomerProfile;
 
-use Asx\Client\Json\ResponseObject;
+use Exchange\Client\Json\ResponseObject;
 
 /**
  * Class UpdateProfileResponse
  *
- * @package Asx\Client\CustomerProfile
+ * @package Exchange\Client\CustomerProfile
  *
  * @property string $profileGuid
  * @property string $customerIdentification

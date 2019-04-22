@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\CustomerProfile\PaymentData;
+namespace Exchange\Client\CustomerProfile\PaymentData;
 
-use Asx\Client\Json\DataObject;
+use Exchange\Client\Json\DataObject;
 
 /**
  * Class PaymentData
  *
- * @package Ixopay\Client\CustomerProfile\PaymentData
+ * @package Exchange\Client\CustomerProfile\PaymentData
  */
 abstract class PaymentData extends DataObject {
 
