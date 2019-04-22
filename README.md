@@ -12,15 +12,15 @@ composer require allsecure-pay/php-xclient \\still not operational
 ```php
 <?php
 
-use Asx\Client\Client;
-use Asx\Client\Data\Customer;
-use Asx\Client\Transaction\Debit;
-use Asx\Client\Transaction\Result;
+use Exchange\Client\Client;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Transaction\Debit;
+use Exchange\Client\Transaction\Result;
 
 // Include the autoloader (if not already done via Composer autoloader)
 require_once('path/to/initClientAutoload.php');
 
-// Instantiate the "Asx\Client\Client" with your credentials
+// Instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
 $customer = new Customer();
