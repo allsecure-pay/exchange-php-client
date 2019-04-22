@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Http;
+namespace Exchange\Client\Http;
 
-use Asx\Client\Http\Exception\ClientException;
+use Exchange\Client\Http\Exception\ClientException;
 
 /**
  * Class CurlClient
  *
- * @package Asx\Client\Http
+ * @package Exchange\Client\Http
  */
 class CurlClient implements ClientInterface {
 

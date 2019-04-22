@@ -1,13 +1,13 @@
 <?php
 
-namespace Asx\Client\Http;
+namespace Exchange\Client\Http;
 
-use Asx\Client\Http\Exception\ResponseException;
+use Exchange\Client\Http\Exception\ResponseException;
 
 /**
  * Class Response
  *
- * @package Asx\Client\Http
+ * @package Exchange\Client\Http
  */
 class Response implements ResponseInterface {
 

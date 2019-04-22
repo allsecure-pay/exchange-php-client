@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Http;
+namespace Exchange\Client\Http;
 
 /**
  * Interface ResponseInterface
  *
- * @package Asx\Client\Http
+ * @package Exchange\Client\Http
  */
 interface ResponseInterface {
 
