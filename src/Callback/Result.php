@@ -1,16 +1,16 @@
 <?php
 
-namespace Asx\Client\Callback;
+namespace Exchange\Client\Callback;
 
-use Asx\Client\Data\Customer;
-use Asx\Client\Data\Result\ResultData;
-use Asx\Client\Transaction\Error;
+use Exchange\Client\Data\Customer;
+use Exchange\Client\Data\Result\ResultData;
+use Exchange\Client\Transaction\Error;
 
 /**
  * Callback result, which is produced by processing a callback request's body.
  * Reports the status of an asynchronous transaction.
  *
- * @package Asx\Client\Callback
+ * @package Exchange\Client\Callback
  */
 class Result {
     /** The callback reports, that the transaction finished successfully. */

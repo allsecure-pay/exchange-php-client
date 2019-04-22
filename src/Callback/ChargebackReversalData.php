@@ -1,11 +1,11 @@
 <?php
 
-namespace Asx\Client\Callback;
+namespace Exchange\Client\Callback;
 
 /**
  * Class ChargebackReversalData
  *
- * @package Asx\Client\Callback
+ * @package Exchange\Client\Callback
  */
 class ChargebackReversalData {
 
