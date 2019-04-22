@@ -1,10 +1,10 @@
-Ixopay Client
+Exchange Client
 ==============
 
 ## Installation via composer:
 
 ```sh
-composer require allsecure-pay/php-xclient \\still not operational
+composer require allsecure-pay/php-exchange \\still not operational
 ```
 
 ## Usage:
