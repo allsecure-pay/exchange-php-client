@@ -1,7 +1,7 @@
 <?php
 
-use Asx\Client\Client;
-use Asx\Client\StatusApi\StatusRequestData;
+use Exchange\Client\Client;
+use Exchange\Client\StatusApi\StatusRequestData;
 
 require_once('../initClientAutoload.php');
 
