@@ -40,7 +40,8 @@ class Generator {
     /**
      * @var string
      */
-    protected $namespaceRoot = 'https://asxgw.com'; 
+    protected $namespaceRoot = 'https://asxgw.com'; //Live Url
+    // protected $namespaceRoot = 'http://asxgw.paymentsandbox.cloud'; //Test Url
 
     /**
      * @param string $namespaceRoot
