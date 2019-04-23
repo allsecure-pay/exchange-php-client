@@ -4,7 +4,7 @@ Exchange Client
 ## Installation via composer:
 
 ```sh
-composer require allsecure-pay/php-exchange \\still not operational
+composer require allsecure-pay/php-exchange
 ```
 
 ## Usage:
