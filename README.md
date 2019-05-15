@@ -6,6 +6,14 @@ Exchange Client
 ```sh
 composer require allsecure-pay/php-exchange
 ```
+##
+```sh
+PHP client is made having in mind the LIVE environment. If you are to test on a Sandbox environment, you should ammend the client as follows:
+
+src/Client.php to comment-out line 44 and uncomment line 45
+src/Client.php to comment-out line 68 and uncomment line 69
+src/Xml/Generator.php to comment-out line 43 and uncomment line 44
+```
 
 ## Usage:
 
