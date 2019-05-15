@@ -6,7 +6,7 @@ Exchange Client
 ```sh
 composer require allsecure-pay/php-exchange
 ```
-##
+##Testing
 ```sh
 PHP client is made having in mind the LIVE environment. If you are to test on a Sandbox environment, you should ammend the client as follows:
 
