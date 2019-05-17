@@ -80,15 +80,42 @@ if ($result->isSuccess()) {
     }
 }
 ```
-## Get Error data:
+## Status Request:
 
 ```php
 <?php
 
+use Exchange\Client\Client;
+use Exchange\Client\StatusApi\StatusRequestData;
+
+$username = 'Your Username';
+$password = 'Your password';
+$apiKey = 'Connector API Key';
+$sharedSecret = 'Connector Shared Secret';
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$client = new Client($username, $password, $apiKey, $sharedSecret);
+
+$statusRequestData = new StatusRequestData();
+
+// use either the UUID or your merchantTransactionId but not both
+//$statusRequestData->setTransactionUuid($transactionUuid);
+$statusRequestData->setMerchantTransactionId($merchantTransactionId);
+
+$statusResult = $client->sendStatusRequest($statusRequestData);
+
+// dump all data 
+var_dump($statusResult);
+
+// dump card data
+$cardData = $statusResult->getreturnData();
+var_dump($cardData);
+
+// dump & echo error data
 $errorData = $statusResult->getFirstError();
 
-echo '<p>
-message: ' . $errorData->getMessage() . '</br>
-code: ' . $errorData->getCode() . '</br>
-adapterCode: ' . $errorData->getAdapterCode() . '</br>
-adapterMessage: ' . $errorData->getAdapterMessage() . '</p>';
+echo $errorData->getMessage();
+echo $errorData->getCode();
+echo $errorData->getAdapterCode();
+echo $errorData->getAdapterMessage();
