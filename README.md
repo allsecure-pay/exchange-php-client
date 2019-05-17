@@ -79,3 +79,16 @@ if ($result->isSuccess()) {
         //finishCart();
     }
 }
+```
+## Get Error data:
+
+```php
+<?php
+
+$errorData = $statusResult->getFirstError();
+
+echo '<p>
+message: ' . $errorData->getMessage() . '</br>
+code: ' . $errorData->getCode() . '</br>
+adapterCode: ' . $errorData->getAdapterCode() . '</br>
+adapterMessage: ' . $errorData->getAdapterMessage() . '</p>';
