@@ -6,6 +6,8 @@ Exchange Client
 ```sh
 composer require allsecure-pay/php-exchange
 ```
+Refer to <a href="https://github.com/composer/composer/blob/master/doc/00-intro.md#introduction" alt="_new">Composer Documentation</a> if you are not familiar with composer).
+
 ## Usage with test parameters:
 
 PHP client is made having in mind the LIVE environment. If you are to test 
