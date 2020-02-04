@@ -41,7 +41,7 @@ class Client {
     /**
      * The default url points to the Exchange Gateway
      */
-    const DEFAULT_EXCHANGE_URL = 'https://asxgw.com'; //Live server URL
+    const DEFAULT_EXCHANGE_URL = 'https://asxgw.com/'; //Live server URL
     // const DEFAULT_EXCHANGE_URL = 'https://asxgw.paymentsandbox.cloud/'; TEST server URL
 
     const TRANSACTION_ROUTE = 'transaction';
