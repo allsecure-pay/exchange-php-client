@@ -42,7 +42,7 @@ class Client {
      * The default url points to the Exchange Gateway
      */
     const DEFAULT_EXCHANGE_URL = 'https://asxgw.com/'; //Live server URL
-    // const DEFAULT_EXCHANGE_URL = 'https://asxgw.paymentsandbox.cloud/'; TEST server URL
+    // const DEFAULT_EXCHANGE_URL = 'https://asxgw.paymentsandbox.cloud/'; // TEST server URL
 
     const TRANSACTION_ROUTE = 'transaction';
 
@@ -66,7 +66,7 @@ class Client {
      * @var string
      */
     protected static $gatewayUrl = 'https://asxgw.com/'; //Live server URL
-    // protected static $gatewayUrl = 'https://asxgw.paymentsandbox.cloud/'; TEST server URL
+    // protected static $gatewayUrl = 'https://asxgw.paymentsandbox.cloud/'; // TEST server URL
 
     /**
      * the api key given by the exchange gateway
