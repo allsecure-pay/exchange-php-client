@@ -164,7 +164,11 @@ class Generator {
 
             $this->verifyFutureDateTime($schedule->getStartDateTime(), 'startDateTime');
             $this->_appendTextNode($scheduleNode, 'startDateTime', $schedule->getStartDateTime()->format('Y-m-d H:i:s T'));
-
+			
+			if ($schedule->getMerchantMetaData()) {
+                $this->_appendTextNode($scheduleNode, 'merchantMetaData', $schedule->getMerchantMetaData());
+            }
+			
         } else {
             $this->_appendTextNode($scheduleNode, 'scheduleId', $schedule->getScheduleId());
 
@@ -313,7 +317,11 @@ class Generator {
             $this->_appendTextNode($scheduleNode, 'startDateTime', $scheduleData->getStartDateTime()->format('Y-m-d H:i:s T'));
         }
 
-        $parentNode->appendChild($scheduleNode);
+        if ($scheduleData->getMerchantMetaData()) {
+            $this->_appendTextNode($scheduleNode, 'merchantMetaData', $scheduleData->getMerchantMetaData());
+        }
+		
+		$parentNode->appendChild($scheduleNode);
     }
 
     /**
