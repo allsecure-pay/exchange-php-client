@@ -3,7 +3,7 @@ Exchange Client
 
 ## API Documentation:
 
-Learn more about AllSecure Exchange platform by reading our <a href="https://asxgw.com/documentation/gateway>documentation</a>
+Learn more about AllSecure Exchange platform by reading our <a href="https://asxgw.com/documentation/gateway">documentation</a>.
 
 ## Installation via composer:
 
