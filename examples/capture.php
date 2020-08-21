@@ -10,7 +10,7 @@ require_once('../initClientAutoload.php');
 $client = new Client('username', 'password', 'apiKey', 'sharedSecret', 'language');
 
 // define your transaction ID: e.g. 'myId-'.date('Y-m-d').'-'.uniqid()
-$merchantTransactionId = 'C-Test-'.date('Y-m-d').'-'.uniqid(); // must be unique
+$merchantTransactionId = 'capture-'.date('Y-m-d').'-'.uniqid(); // must be unique
 
 $capture = new Capture();
 $capture
