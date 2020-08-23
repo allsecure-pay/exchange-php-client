@@ -17,7 +17,7 @@ $capture
  ->setTransactionId($merchantTransactionId)
  ->setAmount(4.99)
  ->setCurrency('EUR')
- ->setReferenceTransactionId($_POST["RefTranId"]);
+ ->setReferenceTransactionId('UUID_of_Preauthorize_Transaction');
 
 $result = $client->capture($capture);
 
