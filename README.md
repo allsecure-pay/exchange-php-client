@@ -21,8 +21,8 @@ Refer to <a href="https://github.com/composer/composer/blob/master/doc/00-intro.
 PHP client is made having in mind the LIVE environment. If you are to test 
 on a Sandbox environment, you should ammend the client as follows:
 
-- src/Client.php to comment-out line 44 and uncomment line 45
-- src/Client.php to comment-out line 68 and uncomment line 69
+- src/Client.php to comment-out line 46 and uncomment line 47
+- src/Client.php to comment-out line 70 and uncomment line 71
 - src/Xml/Generator.php to comment-out line 43 and uncomment line 44
 
 
