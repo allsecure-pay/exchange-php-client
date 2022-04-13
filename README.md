@@ -1,4 +1,4 @@
-Exchange Client
+Exchange Client v2 (XML)
 ==============
 
 [![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
