@@ -1,4 +1,4 @@
-Exchange Client v3 (Json)
+Exchange Client
 ==============
 
 [![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
@@ -8,7 +8,7 @@ Exchange Client v3 (Json)
 ## Installation via composer:
 
 ```sh
-composer require allsecure-pay/php-client-json
+composer require allsecure-pay/php-exchange
 ```
 
 ## Documentation

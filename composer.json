@@ -1,5 +1,5 @@
 {
-    "name": "allsecure-pay/php-exchange-json",
+    "name": "allsecure-pay/php-exchange",
     "description": "AllSecure eXchange Client for PHP",
     "keywords": [
         "allsecure"
