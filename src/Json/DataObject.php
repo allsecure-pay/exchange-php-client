@@ -2,6 +2,12 @@
 
 namespace Exchange\Client\Json;
 
+use Exchange\Client\CustomerProfile\CustomerData;
+use Exchange\Client\CustomerProfile\PaymentInstrument;
+use Exchange\Client\Data\PaymentData\IbanData;
+use Exchange\Client\Data\PaymentData\WalletData;
+use Exchange\Client\Data\ThreeDSecureData;
+
 /**
  * Class DataObject
  *
@@ -15,11 +21,11 @@ class DataObject implements \ArrayAccess, \JsonSerializable {
     protected $_data = array();
 
     protected static $_typeMap = array(
-        'customerData' => \Exchange\Client\CustomerProfile\CustomerData::class,
-        'paymentInstrument' => \Exchange\Client\CustomerProfile\PaymentInstrument::class,
-        'paymentData.card' => \Exchange\Client\CustomerProfile\PaymentData\CardData::class,
-        'paymentData.iban' => \Exchange\Client\CustomerProfile\PaymentData\IbanData::class,
-        'paymentData.wallet' => \Exchange\Client\CustomerProfile\PaymentData\WalletData::class,
+        'customerData' => CustomerData::class,
+        'paymentInstrument' => PaymentInstrument::class,
+        'paymentData.iban' => IbanData::class,
+        'paymentData.wallet' => WalletData::class,
+        'threeDSecureData' => ThreeDSecureData::class,
     );
 
     /**
@@ -66,7 +72,8 @@ class DataObject implements \ArrayAccess, \JsonSerializable {
      * @return string
      */
     public function __toString() {
-        return json_encode($this->_data);
+        /** @noinspection MagicMethodsValidityInspection */
+        return json_encode($this->_data) ?: '';
     }
 
 
@@ -116,7 +123,7 @@ class DataObject implements \ArrayAccess, \JsonSerializable {
     }
 
     /**
-     * @param string $data
+     * @param array $data
      */
     public function _populateFromResponse($data) {
         foreach ($data as $k=>$v) {

@@ -1,20 +1,19 @@
-
 {
-    "name": "allsecure-pay/php-exchange",
+    "name": "allsecure-pay/php-exchange-json",
     "description": "AllSecure eXchange Client for PHP",
     "keywords": [
         "allsecure"
     ],
     "license": "MIT",
-    "type": "project",
+    "type": "library",
     "require": {
         "php": ">=5.6",
         "ext-curl": "*",
-        "psr/log": "1.*"
+        "psr/log": "*"
     },
     "autoload": {
         "psr-4": {
-            "Exchange\\Client\\": "src/"
+            "Ixopay\\Client\\": "src/"
         }
     },
     "scripts": {

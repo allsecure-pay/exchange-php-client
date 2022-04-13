@@ -5,10 +5,17 @@ namespace Exchange\Client\Transaction;
 use Exchange\Client\Transaction\Base\AbstractTransaction;
 use Exchange\Client\Transaction\Base\AddToCustomerProfileInterface;
 use Exchange\Client\Transaction\Base\AddToCustomerProfileTrait;
+use Exchange\Client\Transaction\Base\CustomerInterface;
+use Exchange\Client\Transaction\Base\CustomerTrait;
+use Exchange\Client\Transaction\Base\IndicatorInterface;
+use Exchange\Client\Transaction\Base\IndicatorTrait;
 use Exchange\Client\Transaction\Base\OffsiteInterface;
 use Exchange\Client\Transaction\Base\OffsiteTrait;
+use Exchange\Client\Transaction\Base\PayByLinkTrait;
 use Exchange\Client\Transaction\Base\ScheduleInterface;
 use Exchange\Client\Transaction\Base\ScheduleTrait;
+use Exchange\Client\Transaction\Base\ThreeDSecureInterface;
+use Exchange\Client\Transaction\Base\ThreeDSecureTrait;
 
 /**
  * Register: Register the customer's payment data for recurring charges.
@@ -17,13 +24,30 @@ use Exchange\Client\Transaction\Base\ScheduleTrait;
  *
  * @package Exchange\Client\Transaction
  */
-class Register extends AbstractTransaction implements OffsiteInterface, ScheduleInterface, AddToCustomerProfileInterface {
+class Register extends AbstractTransaction
+               implements AddToCustomerProfileInterface,
+                          CustomerInterface,
+                          OffsiteInterface,
+                          ScheduleInterface,
+                          ThreeDSecureInterface,
+                          IndicatorInterface
+{
+
+    use AddToCustomerProfileTrait;
+    use CustomerTrait;
     use OffsiteTrait;
     use ScheduleTrait;
-    use AddToCustomerProfileTrait;
-	
-	
-	/**
+    use ThreeDSecureTrait;
+    use PayByLinkTrait;
+    use IndicatorTrait;
+
+    /** @var string */
+    protected $language;
+
+    /** @var string */
+    protected $transactionToken;
+
+    /**
      * @var string
      */
     protected $transactionIndicator;
@@ -31,15 +55,32 @@ class Register extends AbstractTransaction implements OffsiteInterface, Schedule
     /**
      * @return string
      */
-    public function getTransactionIndicator() {
-        return $this->transactionIndicator;
+    public function getTransactionToken()
+    {
+        return $this->transactionToken;
     }
 
     /**
-     * @param string $transactionIndicator
+     * @param string $transactionToken
      */
-    public function setTransactionIndicator($transactionIndicator) {
-        $this->transactionIndicator = $transactionIndicator;
-		return $this;
+    public function setTransactionToken($transactionToken)
+    {
+        $this->transactionToken = $transactionToken;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * @param string $language
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
     }
 }

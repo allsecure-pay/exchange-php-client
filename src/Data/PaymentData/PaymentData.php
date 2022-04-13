@@ -1,6 +1,6 @@
 <?php
 
-namespace Exchange\Client\CustomerProfile\PaymentData;
+namespace Exchange\Client\Data\PaymentData;
 
 use Exchange\Client\Json\DataObject;
 

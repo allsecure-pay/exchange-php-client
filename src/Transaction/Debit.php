@@ -7,24 +7,49 @@ use Exchange\Client\Transaction\Base\AddToCustomerProfileInterface;
 use Exchange\Client\Transaction\Base\AddToCustomerProfileTrait;
 use Exchange\Client\Transaction\Base\AmountableInterface;
 use Exchange\Client\Transaction\Base\AmountableTrait;
+use Exchange\Client\Transaction\Base\CustomerInterface;
+use Exchange\Client\Transaction\Base\CustomerTrait;
+use Exchange\Client\Transaction\Base\IndicatorInterface;
+use Exchange\Client\Transaction\Base\IndicatorTrait;
 use Exchange\Client\Transaction\Base\ItemsInterface;
 use Exchange\Client\Transaction\Base\ItemsTrait;
 use Exchange\Client\Transaction\Base\OffsiteInterface;
 use Exchange\Client\Transaction\Base\OffsiteTrait;
+use Exchange\Client\Transaction\Base\PayByLinkTrait;
 use Exchange\Client\Transaction\Base\ScheduleInterface;
 use Exchange\Client\Transaction\Base\ScheduleTrait;
+use Exchange\Client\Transaction\Base\TransactionSplitsInterface;
+use Exchange\Client\Transaction\Base\TransactionSplitsTrait;
+use Exchange\Client\Transaction\Base\ThreeDSecureInterface;
+use Exchange\Client\Transaction\Base\ThreeDSecureTrait;
 
 /**
  * Debit: Charge the customer for a certain amount of money. This could be once, but also recurring.
  *
  * @package Exchange\Client\Transaction
  */
-class Debit extends AbstractTransactionWithReference implements AmountableInterface, OffsiteInterface, ItemsInterface, ScheduleInterface, AddToCustomerProfileInterface {
-    use OffsiteTrait;
-    use AmountableTrait;
-    use ItemsTrait;
-    use ScheduleTrait;
+class Debit extends AbstractTransactionWithReference
+            implements AddToCustomerProfileInterface,
+                       AmountableInterface,
+                       CustomerInterface,
+                       ItemsInterface,
+                       TransactionSplitsInterface,
+                       OffsiteInterface,
+                       ScheduleInterface,
+                       ThreeDSecureInterface,
+                       IndicatorInterface
+{
+
     use AddToCustomerProfileTrait;
+    use AmountableTrait;
+    use CustomerTrait;
+    use ItemsTrait;
+    use TransactionSplitsTrait;
+    use OffsiteTrait;
+    use ScheduleTrait;
+    use ThreeDSecureTrait;
+    use PayByLinkTrait;
+    use IndicatorTrait;
 
     const TRANSACTION_INDICATOR_SINGLE = 'SINGLE';
     const TRANSACTION_INDICATOR_INITIAL = 'INITIAL';
@@ -32,15 +57,31 @@ class Debit extends AbstractTransactionWithReference implements AmountableInterf
     const TRANSACTION_INDICATOR_CARDONFILE = 'CARDONFILE';
     const TRANSACTION_INDICATOR_CARDONFILE_MERCHANT = 'CARDONFILE_MERCHANT';
 
-    /**
-     * @var bool
-     */
+    /** @var string */
+    protected $transactionToken;
+
+    /** @var bool */
     protected $withRegister = false;
 
+    /** @var string */
+    protected $language;
+
     /**
-     * @var string
+     * @return string
      */
-    protected $transactionIndicator;
+    public function getTransactionToken()
+    {
+        return $this->transactionToken;
+    }
+
+    /**
+     * @param string $transactionToken
+     */
+    public function setTransactionToken($transactionToken)
+    {
+        $this->transactionToken = $transactionToken;
+        return $this;
+    }
 
     /**
      * @return boolean
@@ -64,16 +105,17 @@ class Debit extends AbstractTransactionWithReference implements AmountableInterf
     /**
      * @return string
      */
-    public function getTransactionIndicator() {
-        return $this->transactionIndicator;
+    public function getLanguage()
+    {
+        return $this->language;
     }
 
     /**
-     * @param string $transactionIndicator
+     * @param string $language
      */
-    public function setTransactionIndicator($transactionIndicator) {
-        $this->transactionIndicator = $transactionIndicator;
+    public function setLanguage($language)
+    {
+        $this->language = $language;
         return $this;
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace Exchange\Client\Xml;
 
-use Exchange\Client\Callback\ChargebackData;
-use Exchange\Client\Callback\ChargebackReversalData;
+use Exchange\Client\Data\ChargebackData;
+use Exchange\Client\Data\ChargebackReversalData;
 use Exchange\Client\Data\Customer;
 use Exchange\Client\Data\Result\CreditcardData;
 use Exchange\Client\Data\Result\IbanData;
@@ -177,9 +177,9 @@ class Parser {
                 case 'scheduleStatus':
                     $result->setScheduleStatus($child->nodeValue);
                     break;
-				case 'scheduleMerchantMetaData':
+                case 'scheduleMerchantMetaData':
                     $result->setScheduleMerchantMetaData($child->nodeValue);
-                    break;	
+                    break;
                 default:
                     break;
             }
@@ -370,7 +370,7 @@ class Parser {
                 case 'oldStatus':
                 case 'newStatus':
                 case 'scheduledAt':
-				case 'merchantMetaData':
+                case 'merchantMetaData':
                     if (method_exists($scheduleResult, 'set'.ucfirst($childNode->localName))) {
                         $scheduleResult->{'set' . ucfirst($childNode->localName)}($childNode->nodeValue);
                     }
@@ -569,6 +569,15 @@ class Parser {
                         break;
                     case 'walletOwner':
                         $walletData->setWalletOwner($child->nodeValue);
+                        break;
+                    case 'walletOwnerFirstName':
+                        $walletData->setWalletOwnerFirstName($child->nodeValue);
+                        break;
+                    case 'walletOwnerLastName':
+                        $walletData->setWalletOwnerLastName($child->nodeValue);
+                        break;
+                    case 'walletOwnerCountryCode':
+                        $walletData->setWalletOwnerCountryCode($child->nodeValue);
                         break;
                     default:
                         break;

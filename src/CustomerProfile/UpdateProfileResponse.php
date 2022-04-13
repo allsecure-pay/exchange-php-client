@@ -9,10 +9,10 @@ use Exchange\Client\Json\ResponseObject;
  *
  * @package Exchange\Client\CustomerProfile
  *
- * @property string $profileGuid
- * @property string $customerIdentification
+ * @property string       $profileGuid
+ * @property string       $customerIdentification
  * @property CustomerData $customer
- * @property array $changedFields
+ * @property array        $changedFields
  */
 class UpdateProfileResponse extends ResponseObject {
 

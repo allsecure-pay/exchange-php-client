@@ -3,18 +3,19 @@
 namespace Exchange\Client\Transaction\Base;
 
 use Exchange\Client\Schedule\ScheduleData;
+use Exchange\Client\Schedule\ScheduleWithTransaction;
 
 interface ScheduleInterface {
 
     /**
-     * @return ScheduleData
+     * @return ScheduleData|ScheduleWithTransaction
      */
     public function getSchedule();
 
     /**
-     * @param ScheduleData $schedule |null
+     * @param ScheduleData|ScheduleWithTransaction $schedule |null
      *
      * @return $this
      */
-    public function setSchedule(ScheduleData $schedule = null);
+    public function setSchedule($schedule = null);
 }

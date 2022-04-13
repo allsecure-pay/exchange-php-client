@@ -9,11 +9,11 @@ use Exchange\Client\Json\ResponseObject;
  *
  * @package Exchange\Client\CustomerProfile
  *
- * @property bool $profileExists
- * @property string $profileGuid
- * @property string $customerIdentification
- * @property string $preferredMethod
- * @property CustomerData $customer
+ * @property bool                $profileExists
+ * @property string              $profileGuid
+ * @property string              $customerIdentification
+ * @property string              $preferredMethod
+ * @property CustomerData        $customer
  * @property PaymentInstrument[] $paymentInstruments
  */
 class GetProfileResponse extends ResponseObject {

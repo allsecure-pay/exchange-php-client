@@ -1,131 +1,91 @@
-Exchange Client
+Exchange Client v3 (Json)
 ==============
 
-[![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
-[![PHP Version](https://img.shields.io/packagist/php-v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
-[![License](https://img.shields.io/github/license/allsecure-pay/php-exchange.svg)](LICENSE)
-
-## API Documentation:
-
-Learn more about AllSecure Exchange platform by reading our <a href="https://asxgw.com/documentation/gateway">documentation</a>.
+[![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange-json)
+[![PHP Version](https://img.shields.io/packagist/php-v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange-json)
+[![License](https://img.shields.io/github/license/allsecure-pay/php-exchange-json.svg)](LICENSE)
 
 ## Installation via composer:
 
 ```sh
-composer require allsecure-pay/php-exchange
+composer require allsecure-pay/php-client-json
 ```
-Refer to <a href="https://github.com/composer/composer/blob/master/doc/00-intro.md#introduction" alt="_new">Composer Documentation</a> if you are not familiar with composer).
 
-## Usage with test parameters:
+## Documentation
 
-PHP client is made having in mind the LIVE environment. If you are to test 
-on a Sandbox environment, you should ammend the client as follows:
-
-- src/Client.php to comment-out line 46 and uncomment line 47
-- src/Client.php to comment-out line 70 and uncomment line 71
-- src/Xml/Generator.php to comment-out line 43 and uncomment line 44
-
+Learn more about AllSecure Exchange platform by reading our <a href="https://asxgw.com/documentation/gateway">documentation</a>.
 
 ## Usage:
 
 ```php
 <?php
 
+// include the autoloader
+require_once('path/to/vendor/autoload.php');
+
 use Exchange\Client\Client;
 use Exchange\Client\Data\Customer;
 use Exchange\Client\Transaction\Debit;
 use Exchange\Client\Transaction\Result;
 
-// Include the autoloader (if not already done via Composer autoloader)
-require_once('path/to/initClientAutoload.php');
-
-// Instantiate the "Exchange\Client\Client" with your credentials
+// instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
+// define relevant objects
 $customer = new Customer();
 $customer->setBillingCountry("AT")
-	->setEmail("customer@email.test");
+         ->setEmail("customer@email.test");
+
+// define your unique transaction ID, e.g. 
+$merchantTransactionId = uniqid('myId', true) . '-' . date('YmdHis');
 
 $debit = new Debit();
-
-// define your transaction ID: e.g. 'myId-'.date('Y-m-d').'-'.uniqid()
-$merchantTransactionId = 'your_transaction_id'; // must be unique
-
-$debit->setTransactionId($merchantTransactionId)
-	->setSuccessUrl($redirectUrl)
-	->setCancelUrl($redirectUrl)
-	->setCallbackUrl($callbackUrl)
-	->setAmount(10.00)
-	->setCurrency('EUR')
-	->setCustomer($customer);
+$debit->setMerchantTransactionId($merchantTransactionId)
+	  ->setSuccessUrl($redirectUrl)
+	  ->setCancelUrl($redirectUrl)
+	  ->setCallbackUrl($callbackUrl)
+	  ->setAmount(10.00)
+	  ->setCurrency('EUR')
+	  ->setCustomer($customer);
 
 // send the transaction
 $result = $client->debit($debit);
 
-// now handle the result
+// handle the result
 if ($result->isSuccess()) {
-	//act depending on $result->getReturnType()
+
+    // store the uuid you receive from the gateway for future references
+    $gatewayReferenceId = $result->getUuid(); 
 	
-    $gatewayReferenceId = $result->getReferenceId(); //store it in your database
-    
+    // handle result based on it's returnType    
     if ($result->getReturnType() == Result::RETURN_TYPE_ERROR) {
-        //error handling
+
+        // read errors on error handling
         $errors = $result->getErrors();
-        //cancelCart();
+
+        // handle the error
+        // e.g. cancelCart();
     
     } elseif ($result->getReturnType() == Result::RETURN_TYPE_REDIRECT) {
-        //redirect the user
+
+        // redirect the user
         header('Location: '.$result->getRedirectUrl());
-        die;
         
     } elseif ($result->getReturnType() == Result::RETURN_TYPE_PENDING) {
-        //payment is pending, wait for callback to complete
+        
+        // payment is pending: wait for callback to complete
     
-        //setCartToPending();
+        // handle pending
+        // e.g. setCartToPending();
     
     } elseif ($result->getReturnType() == Result::RETURN_TYPE_FINISHED) {
+        
         //payment is finished, update your cart/payment transaction
-    
-        //finishCart();
+        // e.g. finishCart();
     }
 }
 ```
-## Status Request:
 
-```php
-<?php
+## License
 
-use Exchange\Client\Client;
-use Exchange\Client\StatusApi\StatusRequestData;
-
-$username = 'Your Username';
-$password = 'Your password';
-$apiKey = 'Connector API Key';
-$sharedSecret = 'Connector Shared Secret';
-
-require_once __DIR__ . '/vendor/autoload.php';
-
-$client = new Client($username, $password, $apiKey, $sharedSecret);
-
-$statusRequestData = new StatusRequestData();
-
-// use either the UUID or your merchantTransactionId but not both
-//$statusRequestData->setTransactionUuid($transactionUuid);
-$statusRequestData->setMerchantTransactionId($merchantTransactionId);
-
-$statusResult = $client->sendStatusRequest($statusRequestData);
-
-// dump all data 
-var_dump($statusResult);
-
-// dump card data
-$cardData = $statusResult->getreturnData();
-var_dump($cardData);
-
-// dump & echo error data
-$errorData = $statusResult->getFirstError();
-
-echo $errorData->getMessage();
-echo $errorData->getCode();
-echo $errorData->getAdapterCode();
-echo $errorData->getAdapterMessage();
+The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
