@@ -1,9 +1,9 @@
 Exchange Client v3 (Json)
 ==============
 
-[![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange-json)
-[![PHP Version](https://img.shields.io/packagist/php-v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange-json)
-[![License](https://img.shields.io/github/license/allsecure-pay/php-exchange-json.svg)](LICENSE)
+[![Packagist](https://img.shields.io/packagist/v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
+[![PHP Version](https://img.shields.io/packagist/php-v/allsecure-pay/php-exchange.svg)](https://packagist.org/packages/allsecure-pay/php-exchange)
+[![License](https://img.shields.io/github/license/allsecure-pay/php-exchange.svg)](LICENSE)
 
 ## Installation via composer:
 
