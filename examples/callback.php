@@ -3,10 +3,10 @@
 // include the autoloader
 require_once('path/to/vendor/autoload.php');
 
-use Ixopay\Client\Client;
-use Ixopay\Client\Callback\Result;
+use Exchange\Client\Client;
+use Exchange\Client\Callback\Result;
 
-// instantiate the "Ixopay\Client\Client" with your credentials
+// instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client('username', 'password', 'apiKey', 'sharedSecret');
 
 // check if the callback is valid

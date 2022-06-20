@@ -3,9 +3,9 @@
 // include the autoloader
 require_once('path/to/vendor/autoload.php');
 
-use Ixopay\Client\Client;
+use Exchange\Client\Client;
 
-// instantiate the "Ixopay\Client\Client" with your credentials
+// instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
 // define parameters if required by the connector

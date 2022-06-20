@@ -3,10 +3,10 @@
 // include the autoloader
 require_once('path/to/vendor/autoload.php');
 
-use Ixopay\Client\Client;
-use Ixopay\Client\Schedule\StartSchedule;
+use Exchange\Client\Client;
+use Exchange\Client\Schedule\StartSchedule;
 
-// instantiate the "Ixopay\Client\Client" with your credentials
+// instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
 // starting a schedule on an initial register transaction

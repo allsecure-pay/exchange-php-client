@@ -3,10 +3,10 @@
 // include the autoloader
 require_once('path/to/vendor/autoload.php');
 
-use Ixopay\Client\Client;
-use Ixopay\Client\StatusApi\StatusRequestData;
+use Exchange\Client\Client;
+use Exchange\Client\StatusApi\StatusRequestData;
 
-// instantiate the "Ixopay\Client\Client" with your credentials
+// instantiate the "Exchange\Client\Client" with your credentials
 $client = new Client("username", "password", "apiKey", "sharedSecret");
 
 // create StatusRequestData
