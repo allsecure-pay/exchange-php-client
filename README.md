@@ -11,6 +11,14 @@ Learn more about AllSecure Exchange platform by reading our <a href="https://asx
 
 ## Installation via composer:
 
+### Requirements
+
+- PHP 5.6 or newer
+- Installed [Composer][composer]
+
+### Composer
+
+Add the ALLSECURE EXCHANGE PHP SDK to your `composer.json`.
 ```sh
 composer require allsecure-pay/php-exchange
 ```
@@ -28,6 +36,21 @@ on a Sandbox environment, you should ammend the client as follows:
 
 ## Usage:
 
+### Prerequisites
+
+- [ALLSECURE EXCHANGE] account
+- API User - consisting of:
+  - username, and
+  - password
+- Connector - consisting of:
+  - API key, and
+  - optional: shared secret
+
+### Setting up credentials
+
+Instantiate a new `Exchange\Client\Client` authenticated via your API user & password,
+connecting it to a payment adapter identified by an API key and authenticated using a shared secret.
+
 ```php
 <?php
 
@@ -40,17 +63,30 @@ use Exchange\Client\Transaction\Result;
 require_once('path/to/initClientAutoload.php');
 
 // Instantiate the "Exchange\Client\Client" with your credentials
+$api_user = "your_username";
+$api_password = "your_username";
+$connector_api_key = "your_chosen_connector_api_key";
+$connector_shared_secret = "your_generated_connector_shared_secret";
 $client = new Client("username", "password", "apiKey", "sharedSecret");
+### Process a debit transaction
+
+Once you instantiated a [client with credentials](#setting-up-credentials),
+you can use the instance to make transaction API calls.
+
+```php
+// define your transaction ID: e.g. 'myId-'.date('Y-m-d').'-'.uniqid()
+$merchantTransactionId = 'your_transaction_id'; // must be unique
 
 $customer = new Customer();
 $customer->setBillingCountry("AT")
 	->setEmail("customer@email.test");
 
+// after the payment flow the user is redirected to the $redirectUrl
+$redirectUrl = 'https://example.org/success';
+// all payment state changes trigger the $callbackUrl hook
+$callbackUrl = 'https://api.example.org/payment-callback';
+
 $debit = new Debit();
-
-// define your transaction ID: e.g. 'myId-'.date('Y-m-d').'-'.uniqid()
-$merchantTransactionId = 'your_transaction_id'; // must be unique
-
 $debit->setTransactionId($merchantTransactionId)
 	->setSuccessUrl($redirectUrl)
 	->setCancelUrl($redirectUrl)
