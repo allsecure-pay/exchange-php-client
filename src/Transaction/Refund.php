@@ -7,6 +7,10 @@ use Exchange\Client\Transaction\Base\AmountableInterface;
 use Exchange\Client\Transaction\Base\AmountableTrait;
 use Exchange\Client\Transaction\Base\ItemsInterface;
 use Exchange\Client\Transaction\Base\ItemsTrait;
+use Exchange\Client\Transaction\Base\LevelTwoAndThreeDataInterface;
+use Exchange\Client\Transaction\Base\LevelTwoAndThreeDataTrait;
+use Exchange\Client\Transaction\Base\TransactionSplitsInterface;
+use Exchange\Client\Transaction\Base\TransactionSplitsTrait;
 
 /**
  * Refund: Refund money from a previous Debit (or Capture) transaction to the customer.
@@ -15,19 +19,55 @@ use Exchange\Client\Transaction\Base\ItemsTrait;
  *
  * @package Exchange\Client\Transaction
  */
-class Refund extends AbstractTransactionWithReference implements AmountableInterface, ItemsInterface {
+class Refund extends AbstractTransactionWithReference
+             implements AmountableInterface,
+                        ItemsInterface,
+                        TransactionSplitsInterface,
+                        LevelTwoAndThreeDataInterface
+{
     use AmountableTrait;
     use ItemsTrait;
+    use TransactionSplitsTrait;
+    use LevelTwoAndThreeDataTrait;
 
-    /**
-     * @var string
-     */
+    /** @var string */
+    protected $callbackUrl;
+
+    /** @var string */
+    protected $transactionToken;
+
+    /** @var string */
     protected $description;
 
     /**
-     * @var string
+     * @return string
      */
-    protected $callbackUrl;
+    public function getCallbackUrl() {
+        return $this->callbackUrl;
+    }
+
+    /**
+     * @param string $callbackUrl
+     */
+    public function setCallbackUrl($callbackUrl) {
+        $this->callbackUrl = $callbackUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTransactionToken()
+    {
+        return $this->transactionToken;
+    }
+
+    /**
+     * @param string $transactionToken
+     */
+    public function setTransactionToken($transactionToken)
+    {
+        $this->transactionToken = $transactionToken;
+    }
 
     /**
      * @return string
@@ -43,17 +83,4 @@ class Refund extends AbstractTransactionWithReference implements AmountableInter
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
-    public function getCallbackUrl() {
-        return $this->callbackUrl;
-    }
-
-    /**
-     * @param string $callbackUrl
-     */
-    public function setCallbackUrl($callbackUrl) {
-        $this->callbackUrl = $callbackUrl;
-    }
 }

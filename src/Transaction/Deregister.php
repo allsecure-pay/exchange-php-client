@@ -11,4 +11,25 @@ use Exchange\Client\Transaction\Base\AbstractTransactionWithReference;
  */
 class Deregister extends AbstractTransactionWithReference {
 
+    /** @var string */
+    protected $transactionToken;
+
+
+    /**
+     * @return string
+     */
+    public function getTransactionToken()
+    {
+        return $this->transactionToken;
+    }
+
+    /**
+     * @param string $transactionToken
+     */
+    public function setTransactionToken($transactionToken)
+    {
+        $this->transactionToken = $transactionToken;
+        return $this;
+    }
+
 }
