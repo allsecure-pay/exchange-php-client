@@ -8,8 +8,8 @@ use Exchange\Client\Data\ThreeDSecureData;
  *
  * @package Exchange\Client\Transaction\Base
  */
-interface ThreeDSecureInterface {
-
+interface ThreeDSecureInterface 
+{
     /**
      * @return ThreeDSecureData
      */
@@ -21,5 +21,4 @@ interface ThreeDSecureInterface {
      * @return mixed
      */
     public function setThreeDSecureData($threeDSecureData);
-
 }
